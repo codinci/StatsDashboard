@@ -1,0 +1,27 @@
+.svg-path {
+	transition: transform .8s ease-in-out, scale 0.2s ease-in-out;
+}
+
+.svg-path:hover {
+  	transform: translateY(-4px) scale(1.05);
+	/* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); Add a box shadow on hover
+	position: relative; */
+}
+
+.nairobi,
+.embu,
+.kisii,
+.elgeyo-marakwet,
+.nyamira{
+	transition: transform 1.2s ease-in-out;
+}
+
+.nairobi:hover,
+.kisii:hover,
+.nyamira:hover {
+	transform: perspective(500px) translateZ(150px);
+}
+.embu:hover,
+.elgeyo-marakwet:hover {
+	transform: perspective(500px) translateZ(180px);
+}
