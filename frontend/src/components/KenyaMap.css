@@ -20,8 +20,10 @@
 .kisii:hover,
 .nyamira:hover {
 	transform: perspective(500px) translateZ(150px);
+	transition: transform 1.5s ease-in-out
 }
 .embu:hover,
 .elgeyo-marakwet:hover {
 	transform: perspective(500px) translateZ(180px);
+	transition: transform 1.5s ease-in-out
 }

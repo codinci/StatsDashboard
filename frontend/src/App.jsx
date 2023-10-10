@@ -1,12 +1,18 @@
 import Dashboard from "./components/Dashboard"
-import NavBar from "./components/NavBar"
+import Layout from "./components/Layout"
+import Login from "./components/Login"
+import { Routes, Route } from "react-router-dom"
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <>
-      <NavBar/>
-      <Dashboard/>
-    </>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="login" element={<Login/>}/>
+      </Route>
+   </Routes>
   )
 }
 

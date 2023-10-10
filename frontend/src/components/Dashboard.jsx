@@ -4,6 +4,7 @@ import { Data } from "../utils/Data";
 import PieChart from "./charts/PieChart";
 import LineChart from "./charts/LineChart";
 import KenyaMap from "./KenyaMap";
+import NavBar from "./NavBar";
 // import PopulationDensityData from "../utils/PopulationDensityData";
 
 Chart.register(CategoryScale);
@@ -32,6 +33,7 @@ const Dashboard = () => {
 
 	return (
 		<section>
+			<NavBar/>
 			<h1>Dashboard</h1>
 			<div className="charts">
 				<PieChart chartData={chartData} />
