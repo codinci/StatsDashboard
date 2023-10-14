@@ -7,6 +7,7 @@ use CodeIgniter\Validation\StrictRules\CreditCardRules;
 use CodeIgniter\Validation\StrictRules\FileRules;
 use CodeIgniter\Validation\StrictRules\FormatRules;
 use CodeIgniter\Validation\StrictRules\Rules;
+use App\Validation\StrongPassword;
 
 class Validation extends BaseConfig
 {
@@ -25,6 +26,7 @@ class Validation extends BaseConfig
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
+        StrongPassword::class,
     ];
 
     /**
@@ -41,13 +43,10 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
+
 }
 
 class CustomRules extends Validation
 {
-    public function strongPassword(string $value, string $options, array $data)
-    {
-        $regex = '/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/';
-        return (bool) preg_match($regex, $value);
-    }
+
 }
